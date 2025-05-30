@@ -2,20 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>My Creator Hub</title>
-<link rel="stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>tacm.live</title>
+<style>
+/* Reset & base */
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+background: #121212;
+color: #fff;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+padding: 40px 20px;
+}
+
+/* Logo */
+header {
+margin-bottom: 40px;
+}
+header img {
+max-width: 300px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+/* Creator List */
+ul.creator-list {
+list-style: none;
+padding: 0;
+margin: 0 auto;
+width: 100%;
+max-width: 600px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+ul.creator-list li {
+opacity: 0;
+transform: translateY(30px);
+animation: fadeUp 0.6s forwards;
+animation-delay: 0.3s;
+}
+ul.creator-list li:nth-child(1) {
+animation-delay: 0.3s;
+}
+ul.creator-list li a {
+display: inline-block;
+text-decoration: none;
+color: #1db954;
+font-size: 1.4rem;
+font-weight: 600;
+padding: 8px 16px;
+border: 2px solid #1db954;
+border-radius: 25px;
+transition: background-color 0.3s, color 0.3s;
+}
+ul.creator-list li a:hover,
+ul.creator-list li a:focus {
+background-color: #1db954;
+color: #121212;
+}
+
+/* Animations */
+@keyframes fadeUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+ul.creator-list {
+flex-direction: column;
+gap: 12px;
+}
+ul.creator-list li a {
+font-size: 1.2rem;
+padding: 10px 24px;
+}
+}
+</style>
 </head>
 <body>
 <header>
-<img src="https://i.ibb.co/5WbYf0g9/Title-TACM.png" alt="Site Logo" class="logo" />
+<img src="https://i.ibb.co/5WbYf0g9/Title-TACM.png" alt="TACM Logo" />
 </header>
 <main>
 <ul class="creator-list">
-<li><a href="https://twitch.tv/creator1" target="_blank">CREATOR1</a></li>
-<li><a href="https://youtube.com/creator2" target="_blank">CREATOR2</a></li>
-<li><a href="https://youtube.com/creator2" target="_blank">CREATOR2</a></li>
-<!-- Add more creators as needed -->
+<li><a href="https://twitch.tv/rjlee30_gaming" target="_blank" rel="noopener noreferrer">RJLEE30_GAMING</a></li>
 </ul>
 </main>
 </body>
