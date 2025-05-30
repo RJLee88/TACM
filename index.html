@@ -11,7 +11,11 @@ box-sizing: border-box;
 }
 body {
 margin: 0;
-background: #121212;
+background-image: url('https://i.ibb.co/GQjFN5GT/26-A92-F4-F-8-DD0-4-B1-E-A660-97-CA3-D9-C9-B88.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
 color: #fff;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 display: flex;
@@ -19,6 +23,15 @@ flex-direction: column;
 align-items: center;
 min-height: 100vh;
 padding: 40px 20px;
+}
+
+/* Overlay for darkening background */
+body::before {
+content: "";
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background: rgba(0, 0, 0, 0.6);
+z-index: -1;
 }
 
 /* Logo */
